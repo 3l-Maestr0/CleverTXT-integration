@@ -1,0 +1,58 @@
+$footerbkg : #003366
+$hrcolor : #006080
+$btncolor : #ff0066
+$btncolor_hover : #e6005c
+$btncolor_active : #cc0052
+
+@mixin roundedBtn
+  border-radius: 30px
+  margin:
+    left: 10px
+
+@mixin navlinks
+  text-decoration: none
+  color: lightgray
+
+.nav-item
+  .nav-link
+    @include navlinks
+    &:hover
+      color: black
+      transition: 0.75s
+  .btn
+    @include roundedBtn
+    border-color: $btncolor
+    box-shadow: none !important
+    outline: none !important
+  .btn-default
+    background-color: $btncolor
+    color : white
+    .badge
+      color: $btncolor
+    &:hover
+      border-color: $btncolor_hover
+      background-color: $btncolor_hover
+      .badge
+        color: $btncolor_hover
+    &:active
+      border-color: $btncolor_active
+      background-color: $btncolor_active
+      .badge
+        color: $btncolor_active
+  .btn-outline-default
+    color: $btncolor
+    &:hover
+      border-color: $btncolor
+      background-color: $btncolor
+      color: white
+    &:active
+      border-color: $btncolor_hover
+      background-color: $btncolor_hover
+
+footer
+  background-color: $footerbkg
+  color: white
+  .jumbotron
+    background: none
+  hr
+    border-color: $hrcolor

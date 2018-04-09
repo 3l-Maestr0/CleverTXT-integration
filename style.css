@@ -1,0 +1,59 @@
+.nav-item .nav-link {
+  text-decoration: none;
+  color: lightgray;
+}
+.nav-item .nav-link:hover {
+  color: black;
+  transition: 0.75s;
+}
+.nav-item .btn {
+  border-radius: 30px;
+  margin-left: 10px;
+  border-color: #ff0066;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.nav-item .btn-default {
+  background-color: #ff0066;
+  color: white;
+}
+.nav-item .btn-default .badge {
+  color: #ff0066;
+}
+.nav-item .btn-default:hover {
+  border-color: #e6005c;
+  background-color: #e6005c;
+}
+.nav-item .btn-default:hover .badge {
+  color: #e6005c;
+}
+.nav-item .btn-default:active {
+  border-color: #cc0052;
+  background-color: #cc0052;
+}
+.nav-item .btn-default:active .badge {
+  color: #cc0052;
+}
+.nav-item .btn-outline-default {
+  color: #ff0066;
+}
+.nav-item .btn-outline-default:hover {
+  border-color: #ff0066;
+  background-color: #ff0066;
+  color: white;
+}
+.nav-item .btn-outline-default:active {
+  border-color: #e6005c;
+  background-color: #e6005c;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+}
+footer .jumbotron {
+  background: none;
+}
+footer hr {
+  border-color: #006080;
+}
