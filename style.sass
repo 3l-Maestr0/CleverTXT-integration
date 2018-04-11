@@ -1,17 +1,80 @@
+/*
+ Theme Name: BootSTheme
+ Theme URI:
+ Description: WordPress theme base on bootstrap 4.0 for CleverTXT
+ Version: 0.1
+ Author: Quentin Mestre
+
+ BootSTheme by Quentin Mestre */
+
+
 $footerbkg : #003366
 $hrcolor : #006080
-$btncolor : #ff0066
-$btncolor_hover : #e6005c
-$btncolor_active : #cc0052
 
-@mixin roundedBtn
-  border-radius: 30px
-  margin:
-    left: 10px
+/* Couleur rose des boutons/texts */
+$rose : #ff0066
+$rose_hover : #e6005c
+$rose_active : #cc0052
+
+/* Couleur orange des boutons/texts */
+$orange : #ff8533
+$orange_hover : #ff751a
+$orange_active : #ff6600
+
+@mixin Btn
+  padding:
+    left: 15px
+    right: 15px
+  box-shadow: none !important
+  outline: none !important
 
 @mixin navlinks
   text-decoration: none
   color: lightgray
+
+.btn
+  white-space: normal !important
+  word-wrap: break-word
+
+.btn-grad-roor
+  background: linear-gradient($rose, $orange)
+  color: white
+  &:hover
+    background-color: $rose_hover
+    color: white
+  &:active
+    background-color: $rose_active
+    color: white
+
+.btn-blanc-or
+  background-color: white
+  color: $orange
+  &:hover
+    color: $orange_hover
+  &:active
+    color: $orange_active
+
+.btn-round-ro
+  @include Btn
+  border-radius: 30px
+  color: white
+  background-color: $rose
+  &:hover
+    background-color: $rose_hover
+    color: white
+  &:active
+    background-color: $rose_active
+    color: white
+
+.icon
+  vertical-align: baseline
+
+img
+  height: 100%
+  max-width: 100%
+
+html
+  word-wrap: break-word
 
 .nav-item
   .nav-link
@@ -20,39 +83,91 @@ $btncolor_active : #cc0052
       color: black
       transition: 0.75s
   .btn
-    @include roundedBtn
-    border-color: $btncolor
-    box-shadow: none !important
-    outline: none !important
+    border-radius: 30px
+    @include Btn
+    border-color: $rose
   .btn-default
-    background-color: $btncolor
+    background-color: $rose
     color : white
     .badge
-      color: $btncolor
+      color: $rose
     &:hover
-      border-color: $btncolor_hover
-      background-color: $btncolor_hover
+      border-color: $rose_hover
+      background-color: $rose_hover
       .badge
-        color: $btncolor_hover
+        color: $rose_hover
     &:active
-      border-color: $btncolor_active
-      background-color: $btncolor_active
+      border-color: $rose_active
+      background-color: $rose_active
       .badge
-        color: $btncolor_active
+        color: $rose_active
   .btn-outline-default
-    color: $btncolor
+    color: $rose
     &:hover
-      border-color: $btncolor
-      background-color: $btncolor
+      border-color: $rose
+      background-color: $rose
       color: white
     &:active
-      border-color: $btncolor_hover
-      background-color: $btncolor_hover
+      border-color: $rose_hover
+      background-color: $rose_hover
 
 footer
   background-color: $footerbkg
   color: white
-  .jumbotron
+  z-index: 4
+  .d-md-flex
     background: none
+    .btn
+      @include Btn
+      border: none
+      border-radius: 20px
+      padding:
+        right: 20px
+        left: 20px
+        top: 10px
+        bottom: 10px
   hr
     border-color: $hrcolor
+  .d-md-flex
+    padding:
+      left: 5%
+      right: 5%
+    min-height: 200px
+    nav
+      .navbar-brand
+        color: white
+        margin-bottom: 10px
+        font-weight: bold
+      .nav-link
+        padding:
+          left: 0px
+          // top : 3px
+          // bottom : 3px
+        color : #cccccc
+        text-align: left
+
+.bg
+  vertical-align: bottom
+  z-index: -2
+.f1
+  position: absolute
+  bottom: -130px
+  right: 0px
+.f2
+  position: absolute
+  top: -175px
+  left: 0px
+.f3
+  position: absolute
+  top: -50px
+  right: 0px
+
+
+.content
+  text-align: left
+  max-width: 100%
+  h2
+    color: $orange
+  hr
+    width: 25%
+    border-color: $orange

@@ -1,47 +1,135 @@
+/*
+ Theme Name: BootSTheme
+ Theme URI:
+ Description: WordPress theme base on bootstrap 4.0 for CleverTXT
+ Version: 0.1
+ Author: Quentin Mestre
+
+ BootSTheme by Quentin Mestre */
+/* Couleur rose des boutons/texts */
+/* Couleur orange des boutons/texts */
+.btn {
+  white-space: normal !important;
+  word-wrap: break-word;
+}
+
+.btn-grad-roor {
+  background: linear-gradient(#ff0066, #ff8533);
+  color: white;
+}
+
+.btn-grad-roor:hover {
+  background-color: #e6005c;
+  color: white;
+}
+
+.btn-grad-roor:active {
+  background-color: #cc0052;
+  color: white;
+}
+
+.btn-blanc-or {
+  background-color: white;
+  color: #ff8533;
+}
+
+.btn-blanc-or:hover {
+  color: #ff751a;
+}
+
+.btn-blanc-or:active {
+  color: #ff6600;
+}
+
+.btn-round-ro {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 30px;
+  color: white;
+  background-color: #ff0066;
+}
+
+.btn-round-ro:hover {
+  background-color: #e6005c;
+  color: white;
+}
+
+.btn-round-ro:active {
+  background-color: #cc0052;
+  color: white;
+}
+
+.icon {
+  vertical-align: baseline;
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
+}
+
+html {
+  word-wrap: break-word;
+}
+
 .nav-item .nav-link {
   text-decoration: none;
   color: lightgray;
 }
+
 .nav-item .nav-link:hover {
   color: black;
   transition: 0.75s;
 }
+
 .nav-item .btn {
   border-radius: 30px;
-  margin-left: 10px;
-  border-color: #ff0066;
+  padding-left: 15px;
+  padding-right: 15px;
   box-shadow: none !important;
   outline: none !important;
+  border-color: #ff0066;
 }
+
 .nav-item .btn-default {
   background-color: #ff0066;
   color: white;
 }
+
 .nav-item .btn-default .badge {
   color: #ff0066;
 }
+
 .nav-item .btn-default:hover {
   border-color: #e6005c;
   background-color: #e6005c;
 }
+
 .nav-item .btn-default:hover .badge {
   color: #e6005c;
 }
+
 .nav-item .btn-default:active {
   border-color: #cc0052;
   background-color: #cc0052;
 }
+
 .nav-item .btn-default:active .badge {
   color: #cc0052;
 }
+
 .nav-item .btn-outline-default {
   color: #ff0066;
 }
+
 .nav-item .btn-outline-default:hover {
   border-color: #ff0066;
   background-color: #ff0066;
   color: white;
 }
+
 .nav-item .btn-outline-default:active {
   border-color: #e6005c;
   background-color: #e6005c;
@@ -50,10 +138,81 @@
 footer {
   background-color: #003366;
   color: white;
+  z-index: 4;
 }
-footer .jumbotron {
+
+footer .d-md-flex {
   background: none;
 }
+
+footer .d-md-flex .btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none;
+  border-radius: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 footer hr {
   border-color: #006080;
+}
+
+footer .d-md-flex {
+  padding-left: 5%;
+  padding-right: 5%;
+  min-height: 200px;
+}
+
+footer .d-md-flex nav .navbar-brand {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+footer .d-md-flex nav .nav-link {
+  padding-left: 0px;
+  color: #cccccc;
+  text-align: left;
+}
+
+.bg {
+  vertical-align: bottom;
+  z-index: -2;
+}
+
+.f1 {
+  position: absolute;
+  bottom: -130px;
+  right: 0px;
+}
+
+.f2 {
+  position: absolute;
+  top: -175px;
+  left: 0px;
+}
+
+.f3 {
+  position: absolute;
+  top: -50px;
+  right: 0px;
+}
+
+.content {
+  text-align: left;
+  max-width: 100%;
+}
+
+.content h2 {
+  color: #ff8533;
+}
+
+.content hr {
+  width: 25%;
+  border-color: #ff8533;
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="69px" viewBox="0 0 110 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Illu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Fonctionnalités---Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Fonctionnalités-Scénarisé-1170-v1.2" transform="translate(-890.000000, -3628.000000)">
+            <g id="En-quoi-CleverTXT-est-il-différent-?" transform="translate(120.000000, 3531.000000)">
+                <g id="Group-9" transform="translate(0.000000, 95.000000)">
+                    <g id="Group-6-Copy" transform="translate(720.000000, 2.000000)">
+                        <g id="Illu" transform="translate(50.000000, 0.000000)">
+                            <g id="TXT" transform="translate(0.000000, 46.109646)">
+                                <g id="Icon">
+                                    <g id="Icon/Typologie/NPS">
+                                        <rect id="Rectangle-291" fill="#53B7E1" x="0" y="0" width="44.3361984" height="22.1680992" rx="4.43361984"></rect>
+                                        <text id="TXT" font-family="PTSans-Bold, PT Sans" font-size="17.7344794" font-weight="bold" fill="#FFFFFF">
+                                            <tspan x="8.05440938" y="17.4778733">TXT</tspan>
+                                        </text>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="AGE" transform="translate(27.000000, 2.000000)">
+                                <g id="Icon/Typologie/NPS">
+                                    <rect id="Rectangle-291" fill="#F9BF3A" x="0" y="0" width="38.7941736" height="19.3970868" rx="3.87941736"></rect>
+                                    <text id="ÂGE" font-family="PTSans-Bold, PT Sans" font-size="15.5176695" font-weight="bold" fill="#FFFFFF">
+                                        <tspan x="6.81484317" y="15.2931391">ÂGE</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                            <g id="NOT" transform="translate(6.000000, 24.000000)">
+                                <g id="Icon/Typologie/NPS">
+                                    <rect id="Rectangle-291" fill="#FFA75D" x="0" y="0" width="27.5869679" height="13.793484" rx="2.75869679"></rect>
+                                    <text id="NOT" font-family="PTSans-Bold, PT Sans" font-size="11.0347872" font-weight="bold" fill="#FFFFFF">
+                                        <tspan x="4.01298427" y="10.9195656">NOT</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                            <g id="NB" transform="translate(37.080420, 24.064565)">
+                                <g id="Icon/Typologie/NPS">
+                                    <rect id="Rectangle-291" fill="#49C7BE" x="0" y="0" width="39.9025786" height="19.9512893" rx="3.99025786"></rect>
+                                    <text id="NB" font-family="PTSans-Bold, PT Sans" font-size="15.9610314" font-weight="bold" fill="#FFFFFF">
+                                        <tspan x="10.6566487" y="15.330086">NB</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                            <g id="NPS" transform="translate(68.465329, 0.000000)">
+                                <g id="Icon/Typologie/NPS">
+                                    <rect id="Rectangle-291" fill="#FB6573" x="0" y="0" width="31.0353389" height="15.5176695" rx="3.10353389"></rect>
+                                    <text id="NPS" font-family="PTSans-Bold, PT Sans" font-size="12.4141356" font-weight="bold" fill="#FFFFFF">
+                                        <tspan x="5.11669287" y="12.0345113">NPS</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                            <g id="O/N" transform="translate(80.416618, 31.582235)">
+                                <g id="Icon/Typologie/NPS" transform="translate(-0.000000, -0.000000)">
+                                    <rect id="Rectangle-291" fill="#64CE83" x="0" y="0" width="28.914912" height="14.457456" rx="2.8914912"></rect>
+                                    <text id="O/N" font-family="PTSans-Bold, PT Sans" font-size="11.5659648" font-weight="bold" fill="#FFFFFF">
+                                        <tspan x="4.90589674" y="10.9638304">O/N</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                            <g id="QCM" transform="translate(47.000000, 47.000000)">
+                                <g id="Icon/Typologie/NPS">
+                                    <rect id="Rectangle-291" fill="#FF7CB8" x="0" y="0" width="31.5279633" height="15.7639817" rx="3.15279633"></rect>
+                                    <text id="QCM" font-family="PTSans-Bold, PT Sans" font-size="12.6111853" font-weight="bold" fill="#FFFFFF">
+                                        <tspan x="3.4954002" y="12.0509321">QCM</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
