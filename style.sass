@@ -8,70 +8,135 @@
  BootSTheme by Quentin Mestre */
 
 
-$footerbkg : #003366
-$hrcolor : #006080
+/* =============================================================================
+    Définition des variables de couleurs
+  =========================================================================== */
+$footerbkg_hexa : #003366
+$hrcolor_hexa : #006080
+$ex-vert : #00cccc
 
-/* Couleur rose des boutons/texts */
-$rose : #ff0066
-$rose_hover : #e6005c
-$rose_active : #cc0052
+/* Couleur rose des boutons/texts
+    - en hexadécimal
+    - en rgb
+ */
+$rose_hexa : #ff0066
+$rose_hexa_hover : #e6005c
+$rose_hexa_active : #cc0052
+$rose_rgb : rgb(255, 0, 102)
+$rose_rgb_hover : rgb(230, 0, 92)
+$rose_rgb_active : rgb(204, 0, 82)
 
-/* Couleur orange des boutons/texts */
-$orange : #ff8533
-$orange_hover : #ff751a
-$orange_active : #ff6600
+/* Couleur orange des boutons/texts
+    - en hexadécimal
+    - en rgb
+ */
+$orange_hexa : #ff8533
+$orange_hexa_hover : #ff751a
+$orange_hexa_active : #ff6600
+$orange_rgb : rgb(255, 133, 51)
+$orange_rgb_hover : rgb(255, 117, 26)
+$orange_rgb_active : rgb(255, 102, 0)
 
+/* =============================================================================
+    Définition des mixins
+  =========================================================================== */
 @mixin Btn
   padding:
     left: 15px
     right: 15px
   box-shadow: none !important
   outline: none !important
+  white-space: normal !important
+  word-wrap: break-word
+
+@mixin Btn-round
+  @include Btn
+  border-radius: 30px
 
 @mixin navlinks
   text-decoration: none
   color: lightgray
 
-.btn
-  white-space: normal !important
-  word-wrap: break-word
-
+/* =============================================================================
+    Définition du style des boutons
+  =========================================================================== */
 .btn-grad-roor
-  background: linear-gradient($rose, $orange)
+  background: linear-gradient($rose_hexa, $orange_hexa)
   color: white
   &:hover
-    background-color: $rose_hover
+    background-color: $rose_hexa_hover
     color: white
   &:active
-    background-color: $rose_active
+    background-color: $rose_hexa_active
     color: white
 
 .btn-blanc-or
   background-color: white
-  color: $orange
+  color: $orange_hexa
   &:hover
-    color: $orange_hover
+    color: $orange_hexa_hover
   &:active
-    color: $orange_active
+    color: $orange_hexa_active
 
 .btn-round-ro
-  @include Btn
-  border-radius: 30px
+  @include Btn-round
   color: white
-  background-color: $rose
+  background-color: $rose_hexa
   &:hover
-    background-color: $rose_hover
+    background-color: $rose_hexa_hover
     color: white
   &:active
-    background-color: $rose_active
+    background-color: $rose_hexa_active
     color: white
+
+.btn-round-ro-inv
+  @include Btn-round
+  color: $rose_hexa
+  background-color: rgba($rose_rgb, 0.1)
+  &:hover
+    background-color: rgba($rose_rgb_hover, 0.2)
+    color: $rose_hexa_hover
+  &:active
+    background-color: rgba($rose_rgb_active, 0.2)
+    color: $rose_hexa_active
+
+
+.btn-round-or
+  @include Btn-round
+  color: white
+  background-color: $orange_hexa
+  &:hover
+    background-color: $orange_hexa_hover
+    color: white
+  &:active
+    background-color: $orange_hexa_active
+    color: white
+
+.btn-round-or-inv
+  @include Btn-round
+  color: $orange_hexa
+  background-color: rgba($orange_rgb, 0.1)
+  &:hover
+    background-color: rgba($orange_rgb_hover, 0.2)
+    color: $orange_hexa_hover
+  &:active
+    background-color: rgba($orange_rgb_active, 0.2)
+    color: $orange_hexa_active
 
 .icon
   vertical-align: baseline
 
+#ex-rose
+  color: $rose_hexa
+#ex-orange
+  color: $orange_hexa
+#ex-vert
+  color: $ex-vert
+
 #pills-tab
   .op-camp
-    width: 300px
+    min-width: 200px
+    max-width: 100%
     height: 200px
     border: none !important
     border-radius: 10px
@@ -82,21 +147,21 @@ $orange_active : #ff6600
     &:link
       background-color: white
     &:visited
-      box-shadow: inset 0px -5px $rose, 0px 0px 30px gray
+      box-shadow: inset 0px -5px $rose_hexa, 0px 0px 30px gray
       background-color: white
     &:hover
-      box-shadow: inset 0px -5px $rose, 0px 0px 30px gray
+      box-shadow: inset 0px -5px $rose_hexa, 0px 0px 30px gray
       transition: 0.5s
       text-decoration: none
       background-color: white
     &:active
-      box-shadow: inset 0px -5px $rose, 0px 0px 30px gray
+      box-shadow: inset 0px -5px $rose_hexa, 0px 0px 30px gray
       background-color: white
 
 
 .border-bottom
   border:
-    color: $rose
+    color: $rose_hexa
     width: 55px
 
 img
@@ -115,34 +180,34 @@ html
   .btn
     border-radius: 30px
     @include Btn
-    border-color: $rose
+    border-color: $rose_hexa
   .btn-default
-    background-color: $rose
+    background-color: $rose_hexa
     color : white
     .badge
-      color: $rose
+      color: $rose_hexa
     &:hover
-      border-color: $rose_hover
-      background-color: $rose_hover
+      border-color: $rose_hexa_hover
+      background-color: $rose_hexa_hover
       .badge
-        color: $rose_hover
+        color: $rose_hexa_hover
     &:active
-      border-color: $rose_active
-      background-color: $rose_active
+      border-color: $rose_hexa_active
+      background-color: $rose_hexa_active
       .badge
-        color: $rose_active
+        color: $rose_hexa_active
   .btn-outline-default
-    color: $rose
+    color: $rose_hexa
     &:hover
-      border-color: $rose
-      background-color: $rose
+      border-color: $rose_hexa
+      background-color: $rose_hexa
       color: white
     &:active
-      border-color: $rose_hover
-      background-color: $rose_hover
+      border-color: $rose_hexa_hover
+      background-color: $rose_hexa_hover
 
 footer
-  background-color: $footerbkg
+  background-color: $footerbkg_hexa
   color: white
   z-index: 4
   .d-md-flex
@@ -157,7 +222,7 @@ footer
         top: 10px
         bottom: 10px
   hr
-    border-color: $hrcolor
+    border-color: $hrcolor_hexa
   .d-md-flex
     padding:
       left: 5%
@@ -189,7 +254,7 @@ footer
   left: 0px
 .f3
   position: absolute
-  top: -50px
+  top: -150px
   right: 0px
 
 
@@ -197,7 +262,7 @@ footer
   text-align: left
   max-width: 100%
   h2
-    color: $orange
+    color: $orange_hexa
   hr
     width: 25%
-    border-color: $orange
+    border-color: $orange_hexa

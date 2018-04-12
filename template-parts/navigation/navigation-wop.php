@@ -27,15 +27,15 @@
 
 
 <ul class="nav nav-pills mb-2 justify-content-md-center" id="pills-tab" role="tablist">
-	<li class="mx-3 nav-item">
-		<a href="#" class="nav-link d-md-flex flex-md-column op-camp active" id="pill-scenar-tab" data-toggle="pill" role="tab" aria-controls="pill-scenar" aria-selected="true">
-			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-scenarisee.svg" alt="Campagne scénarisée" class="mx-auto d-block p-2" width="100px">
+	<li class="m-3 nav-item">
+		<a class="nav-link d-md-flex flex-md-column op-camp active" id="pill-scenar-tab" data-toggle="pill" href="#pill-scenar" role="tab" aria-controls="pill-scenar" aria-selected="true">
+			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-scenarisee.svg" alt="Campagne scénarisée" class="mx-auto d-block p-2 img-fluid" width="100px">
 			<p class="text-center">Campagne scénarisée</p>
 		</a>
 	</li>
-	<li class="mx-3 nav-item">
-		<a href="#" class="nav-link d-md-flex flex-md-column op-camp" id="pill-simple-tab" data-toggle="pill" role="tab" aria-controls="pill-simple" aria-selected="true">
-			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-simple.svg" alt="Campagne simple" class="mx-auto d-block p-2" width="100px">
+	<li class="m-3 nav-item">
+		<a class="nav-link d-md-flex flex-md-column op-camp" id="pill-simple-tab" data-toggle="pill" role="tab" href="#pill-simple" aria-controls="pill-simple" aria-selected="false">
+			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-simple.svg" alt="Campagne simple" class="mx-auto d-block p-2 img-fluid" width="100px">
 			<p class="text-center">Campagne simple</p>
 		</a>
 	</li>

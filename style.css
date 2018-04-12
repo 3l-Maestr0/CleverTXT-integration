@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  Theme Name: BootSTheme
  Theme URI:
@@ -6,13 +7,23 @@
  Author: Quentin Mestre
 
  BootSTheme by Quentin Mestre */
-/* Couleur rose des boutons/texts */
-/* Couleur orange des boutons/texts */
-.btn {
-  white-space: normal !important;
-  word-wrap: break-word;
-}
-
+/* =============================================================================
+    Définition des variables de couleurs
+  @mixin ========================================================================== */
+/* Couleur rose des boutons/texts
+    - en hexadécimal
+    - en rgb
+ */
+/* Couleur orange des boutons/texts
+    - en hexadécimal
+    - en rgb
+ */
+/* =============================================================================
+    Définition des mixins
+  @mixin ========================================================================== */
+/* =============================================================================
+    Définition du style des boutons
+  @mixin ========================================================================== */
 .btn-grad-roor {
   background: linear-gradient(#ff0066, #ff8533);
   color: white;
@@ -46,6 +57,8 @@
   padding-right: 15px;
   box-shadow: none !important;
   outline: none !important;
+  white-space: normal !important;
+  word-wrap: break-word;
   border-radius: 30px;
   color: white;
   background-color: #ff0066;
@@ -61,12 +74,91 @@
   color: white;
 }
 
+.btn-round-ro-inv {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: none !important;
+  outline: none !important;
+  white-space: normal !important;
+  word-wrap: break-word;
+  border-radius: 30px;
+  color: #ff0066;
+  background-color: rgba(255, 0, 102, 0.1);
+}
+
+.btn-round-ro-inv:hover {
+  background-color: rgba(230, 0, 92, 0.2);
+  color: #e6005c;
+}
+
+.btn-round-ro-inv:active {
+  background-color: rgba(204, 0, 82, 0.2);
+  color: #cc0052;
+}
+
+.btn-round-or {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: none !important;
+  outline: none !important;
+  white-space: normal !important;
+  word-wrap: break-word;
+  border-radius: 30px;
+  color: white;
+  background-color: #ff8533;
+}
+
+.btn-round-or:hover {
+  background-color: #ff751a;
+  color: white;
+}
+
+.btn-round-or:active {
+  background-color: #ff6600;
+  color: white;
+}
+
+.btn-round-or-inv {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: none !important;
+  outline: none !important;
+  white-space: normal !important;
+  word-wrap: break-word;
+  border-radius: 30px;
+  color: #ff8533;
+  background-color: rgba(255, 133, 51, 0.1);
+}
+
+.btn-round-or-inv:hover {
+  background-color: rgba(255, 117, 26, 0.2);
+  color: #ff751a;
+}
+
+.btn-round-or-inv:active {
+  background-color: rgba(255, 102, 0, 0.2);
+  color: #ff6600;
+}
+
 .icon {
   vertical-align: baseline;
 }
 
+#ex-rose {
+  color: #ff0066;
+}
+
+#ex-orange {
+  color: #ff8533;
+}
+
+#ex-vert {
+  color: #00cccc;
+}
+
 #pills-tab .op-camp {
-  width: 300px;
+  min-width: 200px;
+  max-width: 100%;
   height: 200px;
   border: none !important;
   border-radius: 10px;
@@ -129,6 +221,8 @@ html {
   padding-right: 15px;
   box-shadow: none !important;
   outline: none !important;
+  white-space: normal !important;
+  word-wrap: break-word;
   border-color: #ff0066;
 }
 
@@ -189,6 +283,8 @@ footer .d-md-flex .btn {
   padding-right: 15px;
   box-shadow: none !important;
   outline: none !important;
+  white-space: normal !important;
+  word-wrap: break-word;
   border: none;
   border-radius: 20px;
   padding-right: 20px;
@@ -238,7 +334,7 @@ footer .d-md-flex nav .nav-link {
 
 .f3 {
   position: absolute;
-  top: -50px;
+  top: -150px;
   right: 0px;
 }
 

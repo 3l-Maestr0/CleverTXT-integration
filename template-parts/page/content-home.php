@@ -80,6 +80,9 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="row p-0 m-0">
   <div class="col">
     <img src="<?php bloginfo("template_directory"); ?>/images/filigramme-1.png" class="img-fluid float-right bg f3">
   </div>
