@@ -1,27 +1,48 @@
 <div class="tab-content" id="pills-tabContent">
+
   <div class="tab-pane fade show active" id="pill-scenar" role="tabpanel" aria-labelledby="pill-scenar-tab">
+
     <!-- Première ligne -->
-    <div class="row mx-0 my-3 py-5 justify-content-md-start content">
-      <div class="col-md-5 offset-md-1 align-self-md-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-10">
-              <h3>Satisfaction</h3>
-              <p>Une nouvelle manière simple et efficace pour mesurer la satisfaction de vos clients vis à vis de vos produits/services.</p>
-              <a href="#" role="button" class="btn btn-default btn-round-ro-inv btn-block d-md-flex align-items-md-center justify-content-md-center">
-                <p class="p-2 p-0 m-0 w-100">Recevez et testez ce scénario gratuitement</p>
-                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-pink.svg" class="ml-auto align-baseline icon">
+    <div class="row mx-0 my-3 py-5 content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 align-self-md-center">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-controls="vertical">
+              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pill-1" role="tab" aria-controls="v-pill-1" aria-selected="true">
+                <h4>Logique</h4>
+                <p>Créez des embranchements en fonction des réponses précedentes.</p>
               </a>
-              <a href="#" role="button" class="btn btn-default btn-round-ro btn-block d-md-flex align-items-md-center justify-content-md-center">
-                <p class="p-2 p-0 m-0 w-100">Essayez CleverTXT gratuitement</p>
-                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-white.svg" class="ml-auto align-baseline icon">
+              <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pill-1" role="tab" aria-controls="v-pill-1" aria-selected="false">
+                <h4>Trigger sur réponse</h4>
+                <p>Déclenchez des alertes en fonction des réponses.</p>
+              </a>
+              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pill-1" role="tab" aria-controls="v-pill-1" aria-selected="false">
+                <h4>Personnalisation</h4>
+                <p>Véritable source de valeur, utilisez les informations de vos fichiers clients pour personnaliser le contenu de vos SMS.</p>
+              </a>
+              <a class="nav-link" id="v-pills-4-tab" data-toggle="pill" href="#v-pill-1" role="tab" aria-controls="v-pill-1" aria-selected="false">
+                <h4>SMS complémentaire</h4>
+                <p>Ajouter un SMS pour clôturer vos questionnaire SMS : remerciements, rappel avant le jour J en cas d'invitation.</p>
               </a>
             </div>
           </div>
+          <div class="col-md-9 bg-light rounded align-self-md-stretch order-first" id="tabcontent">
+            <div class="tab-content my-auto" id="v-pills-tab">
+              <div  class="img-fluid tab-pane fade show active" id="v-pill-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="mx-auto d-block img-fluid">
+              </div>
+              <div  class="img-fluid tab-pane fade" id="v-pill-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="mx-auto d-block img-fluid">
+              </div>
+              <div  class="img-fluid tab-pane fade" id="v-pill-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+                <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="mx-auto d-block img-fluid">
+              </div>
+              <div  class="img-fluid tab-pane fade" id="v-pill-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
+                <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="mx-auto d-block img-fluid">
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-md-5 offset-md-1 align-self-md-center">
-        <img src="<?php bloginfo("template_directory"); ?>/images/exemples-1.png" class="mx-auto d-block img-fluid">
       </div>
     </div>
 
@@ -45,11 +66,11 @@
               <p>Pour en savoir plus sur le NPS, <a href="#">téléchargez notre infographie</a>.</p>
               <a href="#" role="button" class="btn btn-default btn-round-or-inv btn-block d-md-flex align-items-md-center justify-content-md-center">
                 <p class="p-2 p-0 m-0 w-100">Recevez et testez ce scénario gratuitement</p>
-                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-orange.svg" class="ml-auto align-baseline icon">
+                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-orange.svg" class="ml-auto p-2 align-baseline icon">
               </a>
               <a href="#" role="button" class="btn btn-default btn-round-or btn-block d-md-flex align-items-md-center justify-content-md-center">
                 <p class="p-2 p-0 m-0 w-100">Essayez CleverTXT gratuitement</p>
-                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-white.svg" class="ml-auto align-baseline icon">
+                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-white.svg" class="ml-auto p-2 align-baseline icon">
               </a>
             </div>
           </div>
@@ -67,11 +88,11 @@
               <p>Utilisez le SMS pour inviter vos clients / collaborateurs à vos évènements. Ne prenez plus de retard dans votre organisation en attendant la réponse de vos invités, passez à l'instantanéité du SMS.</p>
               <a href="#" role="button" class="btn btn-default btn-round-ro-inv btn-block d-md-flex align-items-md-center justify-content-md-center">
                 <p class="p-2 p-0 m-0 w-100">Recevez et testez ce scénario gratuitement</p>
-                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-pink.svg" class="ml-auto align-baseline icon">
+                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-pink.svg" class="ml-auto p-2 align-baseline icon">
               </a>
               <a href="#" role="button" class="btn btn-default btn-round-ro btn-block d-md-flex align-items-md-center justify-content-md-center">
                 <p class="p-2 p-0 m-0 w-100">Essayez CleverTXT gratuitement</p>
-                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-white.svg" class="ml-auto align-baseline icon">
+                <img src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-white.svg" class="ml-auto p-2 align-baseline icon">
               </a>
             </div>
           </div>

@@ -133,6 +133,96 @@ $orange_rgb_active : rgb(255, 102, 0)
 #ex-vert
   color: $ex-vert
 
+#tabcontent
+  height: inherit
+
+#tarif
+  border-radius: 10px
+  background-color: $footerbkg_hexa
+  box-shadow: 0px 0px 50px gray
+  color: white
+  #or
+    color: gold
+  input[type=range]
+    -webkit-appearance: none
+    -moz-appearance: none
+    display: block
+    width: 100%
+    margin: 8.5px 0
+    &:focus
+      outline: none
+    &::-webkit-slider-runnable-track
+      position: relative
+      width: 100%
+      height: 11px
+      cursor: pointer
+      background: linear-gradient(to right, #c44dff, #ff1a75)
+      border-radius: 30px
+      border: none
+    &::-webkit-slider-thumb
+      position: relative
+      height: 28px
+      width: 28px
+      border-radius: 30px
+      background: white
+      cursor: grab
+      -webkit-appearance: none
+      margin-top: -8.5px
+    &:focus::-webkit-slider-runnable-track
+      background: linear-gradient(to right, #c44dff, #ff1a75)
+    &::-moz-range-track
+      width: 100%
+      height: 11px
+      cursor: pointer
+      background: linear-gradient(to right, #c44dff, #ff1a75)
+      border-radius: 30px
+    &::-moz-range-thumb
+      height: 28px
+      width: 28px
+      border-radius: 30px
+      background: white
+      cursor: grab
+    &::-ms-track
+      width: 100%
+      height: 11px
+      cursor: pointer
+      background: transparent
+      border-color: transparent
+      color: transparent
+    &::-ms-fill-lower
+      background: rgba(41, 97, 145, 0.78)
+      border: 0px solid rgba(1, 1, 1, 0)
+      border-radius: 50px
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0)
+    &::-ms-fill-upper
+      background: rgba(48, 113, 169, 0.78)
+      border: 0px solid rgba(1, 1, 1, 0)
+      border-radius: 50px
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0)
+    &::-ms-thumb
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0)
+      border: 0px solid rgba(0, 0, 0, 0)
+      height: 28px
+      width: 28px
+      border-radius: 50px
+      background: #ff00ff
+      cursor: pointer
+      height: 11px
+    &:focus::-ms-fill-lower
+      background: rgba(48, 113, 169, 0.78)
+    &:focus::-ms-fill-upper
+      background: rgba(55, 129, 193, 0.78)
+
+#pop
+  position: relative
+  color: black
+  background-color: white
+  border-radius: 10px
+
+#v-pills-tab
+  height: 100%
+  .tab-content
+
 #pills-tab
   .op-camp
     min-width: 200px
