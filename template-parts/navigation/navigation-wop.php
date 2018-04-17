@@ -9,43 +9,47 @@
  */
 
 ?>
-<nav class="mb-5 navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-				<img src="<?php bloginfo("template_directory"); ?>/images/clevertxt-color-horizontal.png" alt="<?php bloginfo('name'); ?>"></a>
+				<img src="<?php bloginfo("template_directory"); ?>/images/clevertxt-color-horizontal.png" alt="<?php bloginfo('name'); ?>">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 		</div>
-		<ul class="nav justify-content-end">
-			<li class="nav-item">
-				<a class="nav-link" href="<?php echo get_page_link(118); ?>">Fonctionnalités</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="<?php echo get_page_link(121); ?>">Exemples</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="<?php echo get_page_link(124); ?>">Tarifs</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" role="button" class="btn btn-outline-default">Connexion</a>
-			</li>
-			<li class="nav-item">
-				<a href=" #" role="button" class="ml-3 btn btn-default btn-round-ro">Créer un compte <span class="badge badge-light">BÊTA</span></a>
-			</li>
-		</ul>
+		<div class="collapse navbar-collapse" id="myNav">
+			<ul class="nav navbar-nav ml-auto">
+				<li class="nav-item mr-3"><a class="nav-link" href="<?php echo get_page_link(118); ?>">Fonctionnalités</a></li>
+				<li class="nav-item mr-3"><a class="nav-link" href="<?php echo get_page_link(121); ?>">Exemples</a></li>
+				<li class="nav-item mr-3"><a class="nav-link" href="<?php echo get_page_link(124); ?>">Tarifs</a></li>
+				<li class="nav-item mr-3"><a href="#" role="button" class="mb-2 btn btn-outline-default">Connexion</a></li>
+				<li class="nav-item"><a href=" #" role="button" class="mb-2 btn btn-default btn-round-ro">Créer un compte <span class="badge badge-light">BÊTA</span></a></li>
+			</ul>
+		</div>
 	</div>
 </nav>
 
+<!-- <div class="container">
+	<ul class="row justify-content-md-center" id="pills-tab" role="tablist">
+		<li class="col-md-3">
+		</li>
+		<li class="col-md-3">
+		</li>
+	</ul>
+</div> -->
 
-<ul class="nav nav-pills mb-2 justify-content-md-center" id="pills-tab" role="tablist">
-	<li class="m-3 nav-item">
-		<a class="nav-link d-md-flex flex-md-column op-camp active" id="pill-scenar-tab" data-toggle="pill" href="#pill-scenar" role="tab" aria-controls="pill-scenar" aria-selected="true">
-			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-scenarisee.svg" alt="Campagne scénarisée" class="mx-auto d-block p-2 img-fluid" width="100px">
+<ul class="my-5 py-5 nav nav-pills justify-content-md-center" id="pills-tab" role="tablist">
+	<li class="nav-item col-md-2">
+		<a class="nav-link op-camp active" id="pill-scenar-tab" data-toggle="pill" href="#pill-scenar" role="tab" aria-controls="pill-scenar" aria-selected="true">
+			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-scenarisee.svg" alt="Campagne scénarisée" class="mx-auto d-block img-fluid" width="100px">
 			<p class="text-center">Campagne scénarisée</p>
 		</a>
 	</li>
-	<li class="m-3 nav-item">
-		<a class="nav-link d-md-flex flex-md-column op-camp" id="pill-simple-tab" data-toggle="pill" role="tab" href="#pill-simple" aria-controls="pill-simple" aria-selected="false">
-			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-simple.svg" alt="Campagne simple" class="mx-auto d-block p-2 img-fluid" width="100px">
+	<li class="nav-item col-md-2 offset-md-1">
+		<a class="nav-link op-camp" id="pill-simple-tab" data-toggle="pill" role="tab" href="#pill-simple" aria-controls="pill-simple" aria-selected="false">
+			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-simple.svg" alt="Campagne simple" class="mx-auto d-block img-fluid" width="100px">
 			<p class="text-center">Campagne simple</p>
 		</a>
 	</li>

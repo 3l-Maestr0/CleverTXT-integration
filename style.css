@@ -346,6 +346,10 @@
   height: inherit;
 }
 
+#img-fct #image {
+  width: 80%;
+}
+
 #list-fct .list-group {
   border: none;
 }
@@ -406,7 +410,7 @@ html {
 
 .nav-item .nav-link:hover {
   color: black;
-  transition: 0.75s;
+  transition: 0.5s;
 }
 
 .nav-item .btn {
