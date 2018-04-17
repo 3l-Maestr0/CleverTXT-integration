@@ -94,16 +94,19 @@
   <div class="col-md-12 py-5">
     <div class="row justify-content-md-center">
       <div class="col-md-3 align-self-md-start text-center">
-        <img src="<?php bloginfo("template_directory"); ?>/images/homepage-icon-1.svg" class="mx-auto py-3 d-block img-fluid">
-        <p><strong>Intuitive</strong><br>Nous avons pensé notre solution afin qu'elle soit la plus intuitive à utiliser.</p>
+        <img src="<?php bloginfo("template_directory"); ?>/images/homepage-icon-1.svg" class="mx-auto py-3 d-block img-fluid h-list">
+        <p><strong>Intuitive</strong></p>
+        <p>Nous avons pensé notre solution afin qu'elle soit la plus intuitive à utiliser.</p>
       </div>
       <div class="col-md-3 align-self-md-start text-center">
-        <img src="<?php bloginfo("template_directory"); ?>/images/homepage-icon-2.svg" class="mx-auto py-3 d-block img-fluid">
-        <p><strong>En innovation constante</strong><br>Des améliorations et des évolutions constantes afin de toujours mieux vous satisfaire.</p>
+        <img src="<?php bloginfo("template_directory"); ?>/images/homepage-icon-2.svg" class="mx-auto py-3 d-block img-fluid h-list">
+        <p><strong>En innovation constante</strong></p>
+        <p>Des améliorations et des évolutions constantes afin de toujours mieux vous satisfaire.</p>
       </div>
       <div class="col-md-3 align-self-md-start text-center">
-        <img src="<?php bloginfo("template_directory"); ?>/images/homepage-icon-3.svg" class="mx-auto py-3 d-block img-fluid">
-        <p><strong>100% qualité</strong><br>Nous fournissons un service d'envoi de qualité avec des SMS premium.</p>
+        <img src="<?php bloginfo("template_directory"); ?>/images/homepage-icon-3.svg" class="mx-auto py-3 d-block img-fluid h-list">
+        <p><strong>100% qualité</strong></p>
+        <p>Nous fournissons un service d'envoi de qualité avec des SMS premium.</p>
       </div>
     </div>
   </div>
