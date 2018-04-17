@@ -24,6 +24,15 @@
 /* =============================================================================
     Définition du style des boutons
   @mixin ========================================================================== */
+.btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: none !important;
+  outline: none !important;
+  white-space: normal !important;
+  word-wrap: break-word;
+}
+
 .btn-grad-roor {
   background: linear-gradient(#ff0066, #ff8533);
   color: white;
@@ -72,6 +81,25 @@
 .btn-round-ro:active {
   background-color: #cc0052;
   color: white;
+}
+
+.btn-ro {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: none !important;
+  outline: none !important;
+  white-space: normal !important;
+  word-wrap: break-word;
+  background-color: #ff0066;
+  color: white;
+}
+
+.btn-ro:hover {
+  background-color: #e6005c;
+}
+
+.btn-ro:active {
+  background-color: #cc0052;
 }
 
 .btn-round-ro-inv {
@@ -144,7 +172,7 @@
   vertical-align: baseline;
 }
 
-#ex-rose {
+.ex-rose {
   color: #ff0066;
 }
 
@@ -316,11 +344,6 @@
   background-color: #e9e7e7;
   border-radius: 10px;
   height: inherit;
-  display: block;
-}
-
-#img-fct img {
-  width: 90%;
 }
 
 #list-fct .list-group {
@@ -333,8 +356,28 @@
   border-radius: 10px;
 }
 
+.sellist {
+  box-shadow: none !important;
+  outline: none !important;
+  white-space: normal !important;
+}
+
+#test-sms {
+  width: 100%;
+  resize: none;
+  box-shadow: none !important;
+  outline: none !important;
+  white-space: normal !important;
+}
+
+#var-insert {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
 #test-area {
-  background-color: lightgray;
+  background-color: #e9e7e7;
   border-radius: 10px;
 }
 

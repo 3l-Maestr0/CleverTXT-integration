@@ -3,9 +3,11 @@
   <div class="tab-pane fade show active" id="pill-scenar" role="tabpanel" aria-labelledby="pill-scenar-tab">
 
     <!-- Première ligne -->
-    <div class="row mx-0 my-3 py-5 justify-content-md-start content">
-      <div id="img-fct" class="col-md-7 offset-md-1 align-self-md-center">
-        <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="img-fluid mx-auto d-block align-self-md-center">
+    <div class="row mx-0 my-3 py-5 justify-content-md-start align-items-md-stretch content">
+      <div id="img-fct" class="col-md-7 offset-md-1 d-md-flex flex-md-column justify-content-md-center align-items-md-center py-1">
+        <div id="image p-2">
+          <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="img-fluid mx-auto d-block align-self-md-center">
+        </div>
       </div>
       <div id="list-fct" class="my-2 col-md-3 align-self-md-center">
         <ul class="list-group">
@@ -43,7 +45,7 @@
     <!-- Troisième ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-start content">
       <div class="col-md-5 offset-md-1 align-self-md-center">
-        <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-collaboration.png" class="img-fluid align-self-md-center">
+        <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-collaboration.png" class="img-fluid mx-auto d-block align-self-md-center">
       </div>
       <div class="col-md-5 offset-md-1 align-self-md-center">
         <h4>Collaborez avec vos équipes</h4>
@@ -65,7 +67,7 @@
     <!-- Cinquième ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-start content">
       <div class="col-md-5 offset-md-1 align-self-md-center">
-        <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-analyse.png" class="img-fluid align-self-md-center">
+        <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-analyse.png" class="img-fluid mx-auto d-block align-self-md-center">
       </div>
       <div class="col-md-4 offset-md-1 align-self-md-center">
         <h4>Analysez les réponses collectées</h4>
@@ -115,7 +117,7 @@
 
   <div class="tab-pane fade container my-5 py-5" id="pill-simple" role="tabpanel" aria-labelledby="pill-simple-tab">
     <div class="row">
-      <div class="col-md-12 text-center my-5">
+      <div class="col-md-12 text-center">
         <h3>
           Campagne simple :<br>
           Un seul outil pour votre stratégie marketing SMS
@@ -127,16 +129,61 @@
       </div>
     </div>
     <div class="row justify-content-md-center" id="test-area">
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-md-3 input-group">
-            <select class="custom-select" name="">
+      <div class="col-md-8 py-3">
+        <div class="row my-3">
+          <div class="px-0 col-md-3">
+            <select class="form-control sellist" name="">
               <option selected>Français</option>
               <option value="1">English</option>
               <option value="2">Deutsch</option>
             </select>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-12 px-0 my-0 form-group">
+            <textarea id="test-sms" class="form-control" rows="8" maxlength="160" autocapitalize="sentences">La nouvelle collection est en magasin, venez la découvrir ! Le catalogue est disponible sur goo.gl/rqu4YV</textarea>
+            <button id="var-insert" type="button" class="btn btn-info">Insérez une variable</button>
+          </div>
+          <div class="col-md-12 px-0 my-0">
+            <p class="text-muted my-0"><output id="nbchar" class="ex-rose"></output> caractères restants - <output id="charuse"></output> caractères utilisés - 1 sms</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md mb-3 text-right px-0">
+            <button type="button" class="btn btn-ro">Envoyer</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <script>
+  $(document).ready(function() {
+    var el = $('#test-sms');
+    var outremain = $('#nbchar');
+    var outused = $('#charuse');
+
+    var max = el.attr('maxlength');
+    var length = el.val().length;
+    var remain = max - length;
+
+    outused.html(length);
+    outremain.html(remain);
+
+    el.on({
+      keyup : function(){
+        length = el.val().length;
+        remain = max - length;
+
+        outused.html(length);
+        outremain.html(remain);
+      },
+      keydown : function(){
+        length = el.val().length;
+        remain = max - length;
+
+        outused.html(length);
+        outremain.html(remain);
+      }
+    });
+  });
+  </script>

@@ -17,7 +17,7 @@
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>
-    <?php bloginfo('name') ?><?php if ( is_404() ) : ?> <?php _e('Not Found') ?><?php elseif ( is_home() ) : ?> <?php bloginfo('description') ?><?php else : ?><?php wp_title() ?><?php endif ?>
+    <?php bloginfo('name') ?>
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="<?php bloginfo( 'charset' ); ?>">

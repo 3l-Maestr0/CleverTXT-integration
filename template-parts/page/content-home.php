@@ -27,7 +27,7 @@
 <!-- Deuxième ligne -->
 <div class="row mx-0 my-5 py-5 justify-content-md-start content">
   <div class="col-md-5 offset-md-1 align-self-md-center">
-    <img src="<?php bloginfo("template_directory"); ?>/images/homepage-2.png" class="img-fluid">
+    <img src="<?php bloginfo("template_directory"); ?>/images/homepage-2.png" class="mx-auto d-block img-fluid">
   </div>
   <div class="col-md-5 offset-md-1 align-self-md-center">
     <div class="container">
@@ -68,7 +68,7 @@
     </div>
   </div>
   <div class="col-md-5 offset-md-1 align-self-md-center">
-    <img src="<?php bloginfo("template_directory"); ?>/images/homepage-4.png" class="img-fluid">
+    <img src="<?php bloginfo("template_directory"); ?>/images/homepage-4.png" class="mx-auto d-block img-fluid">
   </div>
   <div class="col-md-5 offset-md-1 align-self-md-center">
     <div class="container">

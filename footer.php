@@ -16,7 +16,7 @@
 
 </div>
 <footer class="text-center">
-  <a class="my-5 up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+  <a class="my-5 up-arrow text-white" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <i class="fas fa-chevron-up"></i>
   </a>
 

@@ -28,7 +28,7 @@
     <!-- Deuxième ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-start content">
       <div class="col-md-5 offset-md-1 align-self-md-center">
-        <img src="<?php bloginfo("template_directory"); ?>/images/exemples-1.png" class="img-fluid">
+        <img src="<?php bloginfo("template_directory"); ?>/images/exemples-1.png" class="mx-auto d-block img-fluid">
       </div>
       <div class="col-md-5 offset-md-1 align-self-md-center">
         <div class="container">
@@ -85,7 +85,7 @@
 
   <div class="tab-pane fade container my-5 py-5" id="pill-simple" role="tabpanel" aria-labelledby="pill-simple-tab">
     <div class="row">
-      <h3 class="col-md-12 text-center my-5 py-5">Annoncez vos <span id="ex-rose">promotions</span>, un <span id="ex-orange">événement</span> ou votre <span id="ex-vert">actualité</span>.</h3>
+      <h3 class="col-md-12 text-center my-5 py-5">Annoncez vos <span class="ex-rose">promotions</span>, un <span id="ex-orange">événement</span> ou votre <span id="ex-vert">actualité</span>.</h3>
     </div>
     <div class="row justify-content-md-center">
       <div class="col-md-12 text-center">

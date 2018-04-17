@@ -60,6 +60,9 @@ $orange_rgb_active : rgb(255, 102, 0)
 /* =============================================================================
     Définition du style des boutons
   =========================================================================== */
+.btn
+  @include Btn
+
 .btn-grad-roor
   background: linear-gradient($rose_hexa, $orange_hexa)
   color: white
@@ -88,6 +91,15 @@ $orange_rgb_active : rgb(255, 102, 0)
   &:active
     background-color: $rose_hexa_active
     color: white
+
+.btn-ro
+  @include Btn
+  background-color: $rose_hexa
+  color: white
+  &:hover
+    background-color: $rose_hexa_hover
+  &:active
+    background-color: $rose_hexa_active
 
 .btn-round-ro-inv
   @include Btn-round
@@ -126,7 +138,7 @@ $orange_rgb_active : rgb(255, 102, 0)
 .icon
   vertical-align: baseline
 
-#ex-rose
+.ex-rose
   color: $rose_hexa
 #ex-orange
   color: $orange_hexa
@@ -252,9 +264,6 @@ $orange_rgb_active : rgb(255, 102, 0)
   background-color: #e9e7e7
   border-radius: 10px
   height: inherit
-  display: block
-  img
-    width: 90%
 
 #list-fct
   .list-group
@@ -264,8 +273,30 @@ $orange_rgb_active : rgb(255, 102, 0)
       border: none
       border-radius: 10px
 
+// #list-w-check
+//   list-style: circle outside url('images/fonctionnalites-check.svg')
+//   li::marker
+//     height: 2em
+
+.sellist
+  box-shadow: none !important
+  outline: none !important
+  white-space: normal !important
+
+#test-sms
+  width: 100%
+  resize: none
+  box-shadow: none !important
+  outline: none !important
+  white-space: normal !important
+
+#var-insert
+  position: absolute
+  right: 10px
+  bottom: 10px
+
 #test-area
-  background-color: lightgray
+  background-color: #e9e7e7
   border-radius: 10px
 
 .border-bottom
