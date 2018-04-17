@@ -14,7 +14,7 @@
       <div class="pt-4 pb-5 row justify-content-md-center">
         <div class="col-md-12">
           <form oninput="nbsms.value=parseInt(prix.value), cout.value = parseFloat(parseInt(prix.value)*6.9/100).toFixed(2)">
-            <p id="pop" class="col-md-1 py-4">
+            <p id="pop" class="col-md-2 py-4">
               <output name="nbsms">0</output> SMS
               <br>
               <strong><output name="cout">0.00</output> €</strong>

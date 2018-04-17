@@ -284,6 +284,8 @@ $orange_rgb_active : rgb(255, 102, 0)
   box-shadow: none !important
   outline: none !important
   white-space: normal !important
+  background: none !important
+  border: none
 
 #test-sms
   width: 100%
@@ -411,3 +413,7 @@ footer
   hr
     width: 25%
     border-color: $orange_hexa
+
+@media screen and (max-width: 768px)
+  .bg
+    display: none

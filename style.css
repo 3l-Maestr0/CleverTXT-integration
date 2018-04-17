@@ -364,6 +364,8 @@
   box-shadow: none !important;
   outline: none !important;
   white-space: normal !important;
+  background: none !important;
+  border: none;
 }
 
 #test-sms {
@@ -548,4 +550,10 @@ footer .d-md-flex nav .nav-link {
 .content hr {
   width: 25%;
   border-color: #ff8533;
+}
+
+@media screen and (max-width: 768px) {
+  .bg {
+    display: none;
+  }
 }

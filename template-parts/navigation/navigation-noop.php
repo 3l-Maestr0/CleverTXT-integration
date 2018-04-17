@@ -13,7 +13,7 @@ $linked = 0;
 <nav class="navbar navbar-expand-lg navbar-light">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+			<a class="navbar-brand px-1" href="<?php bloginfo('url'); ?>">
 				<img src="<?php bloginfo("template_directory"); ?>/images/clevertxt-color-horizontal.png" alt="<?php bloginfo('name'); ?>">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">

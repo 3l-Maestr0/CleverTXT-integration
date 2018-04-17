@@ -4,12 +4,12 @@
 
     <!-- Première ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-start align-items-md-stretch content">
-      <div id="img-fct" class="col-md-7 offset-md-1 d-md-flex flex-md-column justify-content-md-center align-items-md-center py-1">
+      <div id="img-fct" class="col-lg-7 offset-lg-1 d-md-flex flex-md-column justify-content-md-center align-items-md-center py-1">
         <div id="image p-2">
           <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="img-fluid mx-auto d-block align-self-md-center">
         </div>
       </div>
-      <div id="list-fct" class="my-2 col-md-3 align-self-md-center">
+      <div id="list-fct" class="my-2 col-lg-3 align-self-md-center">
         <ul class="list-group">
           <li class="list-group-item list-group-item-action">
             <h5>LOGIQUE</h5>
@@ -131,8 +131,8 @@
     <div class="row justify-content-md-center" id="test-area">
       <div class="col-md-8 py-3">
         <div class="row my-3">
-          <div class="px-0 col-md-3">
-            <select class="form-control sellist" name="">
+          <div class="px-0 col-md-2">
+            <select class="form-control sellist">
               <option selected>Français</option>
               <option value="1">English</option>
               <option value="2">Deutsch</option>
