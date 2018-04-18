@@ -24,33 +24,24 @@
 				<li class="nav-item mr-3"><a class="nav-link" href="<?php echo get_page_link(118); ?>">Fonctionnalités</a></li>
 				<li class="nav-item mr-3"><a class="nav-link" href="<?php echo get_page_link(121); ?>">Exemples</a></li>
 				<li class="nav-item mr-3"><a class="nav-link" href="<?php echo get_page_link(124); ?>">Tarifs</a></li>
-				<li class="nav-item mr-3"><a href="#" role="button" class="mb-2 btn btn-outline-default">Connexion</a></li>
-				<li class="nav-item"><a href=" #" role="button" class="mb-2 btn btn-default btn-round-ro">Créer un compte <span class="badge badge-light">BÊTA</span></a></li>
+				<li class="nav-item mr-3"><a href="https://app.clevertxt.com/login" role="button" class="mb-2 btn btn-outline-default">Connexion</a></li>
+				<li class="nav-item"><a href="https://app.clevertxt.com/register" role="button" class="mb-2 btn btn-default btn-round-ro">Créer un compte <span class="badge badge-light">BÊTA</span></a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
 
-<!-- <div class="container">
-	<ul class="row justify-content-md-center" id="pills-tab" role="tablist">
-		<li class="col-md-3">
-		</li>
-		<li class="col-md-3">
-		</li>
-	</ul>
-</div> -->
-
 <ul class="my-5 py-5 nav nav-pills justify-content-md-center" id="pills-tab" role="tablist">
 	<li class="nav-item col-md-2">
-		<a class="nav-link op-camp active" id="pill-scenar-tab" data-toggle="pill" href="#pill-scenar" role="tab" aria-controls="pill-scenar" aria-selected="true">
+		<a class="nav-link op-camp active py-4" id="pill-scenar-tab" data-toggle="pill" href="#pill-scenar" role="tab" aria-controls="pill-scenar" aria-selected="true">
 			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-scenarisee.svg" alt="Campagne scénarisée" class="mx-auto d-block img-fluid" width="100px">
-			<p class="text-center">Campagne scénarisée</p>
+			<span class="text-dark mx-auto d-block text-center">Campagne scénarisée</span>
 		</a>
 	</li>
 	<li class="nav-item col-md-2 offset-md-1">
-		<a class="nav-link op-camp" id="pill-simple-tab" data-toggle="pill" role="tab" href="#pill-simple" aria-controls="pill-simple" aria-selected="false">
+		<a class="nav-link op-camp py-4" id="pill-simple-tab" data-toggle="pill" role="tab" href="#pill-simple" aria-controls="pill-simple" aria-selected="false">
 			<img src="<?php bloginfo('template_directory') ?>/images/fonctionnalites-campagne-simple.svg" alt="Campagne simple" class="mx-auto d-block img-fluid" width="100px">
-			<p class="text-center">Campagne simple</p>
+			<span class="text-dark mx-auto d-block text-center">Campagne simple</span>
 		</a>
 	</li>
 </ul>

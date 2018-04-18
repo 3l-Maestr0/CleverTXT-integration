@@ -5,7 +5,7 @@
 	<?php get_template_part('template-parts/navigation/navigation', 'wop') ?>
 </header>
 
-<div class="container-fluid px-0">
+<div class="container px-0">
 	<?php get_template_part('template-parts/page/content', 'exemples'); ?>
 
 <?php get_footer(); ?>

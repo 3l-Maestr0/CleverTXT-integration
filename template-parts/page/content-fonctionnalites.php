@@ -4,28 +4,46 @@
 
     <!-- Première ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-start align-items-md-stretch content">
-      <div id="img-fct" class="col-lg-7 offset-lg-1 d-md-flex flex-md-column justify-content-md-center align-items-md-center py-1">
-        <div id="image p-2">
+      <div id="img-fct" class="col-lg-8 d-md-flex flex-md-column justify-content-md-center align-items-md-center py-1 tab-content order-2 order-md-1">
+        <div class="tab-pane fade show active" id="img1" role="tabpanel" aria-labelledby="logique">
           <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="img-fluid mx-auto d-block align-self-md-center">
         </div>
+        <div class="tab-pane fade" id="img2" role="tabpanel" aria-labelledby="trigger">
+          <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="img-fluid mx-auto d-block align-self-md-center" style="filter: grayscale(70%);">
+        </div>
+        <div class="tab-pane fade" id="img3" role="tabpanel" aria-labelledby="personnalisation">
+          <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="img-fluid mx-auto d-block align-self-md-center" style="filter: hue-rotate(90deg);">
+        </div>
+        <div class="tab-pane fade" id="img4" role="tabpanel" aria-labelledby="complementaire">
+          <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-logique.png" class="img-fluid mx-auto d-block align-self-md-center" style="filter: invert(75%);">
+        </div>
       </div>
-      <div id="list-fct" class="my-2 col-lg-3 align-self-md-center">
-        <ul class="list-group">
-          <li class="list-group-item list-group-item-action">
-            <h5>LOGIQUE</h5>
-            <p>Créez des embranchements en fonction des réponses précédentes.</p>
+
+      <div id="list-fct" class="my-2 col-lg-4 align-self-md-center order-1 order-md-2">
+        <ul class="nav nav-tabs" id="list-fct" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="logique" data-toggle="tab" href="#img1" role="tab" aria-controls="img1" aria-selected="true">
+              <h5>LOGIQUE</h5>
+              <span>Créez des embranchements en fonction des réponses précédentes.</span>
+            </a>
           </li>
-          <li class="list-group-item list-group-item-action">
-            <h5>TRIGGER SUR UNE REPONSE</h5>
-            <p>Déclenchez des alertes en fonctions des réponses.</p>
+          <li class="nav-item">
+            <a class="nav-link" id="trigger" data-toggle="tab" href="#img2" role="tab" aria-controls="img2" aria-selected="false">
+              <h5>TRIGGER SUR UNE REPONSE</h5>
+              <span>Déclenchez des alertes en fonctions des réponses.</span>
+            </a>
           </li>
-          <li class="list-group-item list-group-item-action">
-            <h5>PERSONNALISATION</h5>
-            <p>Véritable source de valeur, utilisez les informations de vos fichiers clients pour personnaliser le contenu de vos SMS.</p>
+          <li class="nav-item">
+            <a class="nav-link" id="personnalisation" data-toggle="tab" href="#img3" role="tab" aria-controls="img3" aria-selected="false">
+              <h5>PERSONNALISATION</h5>
+              <span>Véritable source de valeur, utilisez les informations de vos fichiers clients pour personnaliser le contenu de vos SMS.</span>
+            </a>
           </li>
-          <li class="list-group-item list-group-item-action">
-            <h5>SMS COMPLEMENTAIRE</h5>
-            <p>Ajouter un SMS pour clôturer vos questionnaire SMS : remerciements, rappel avant le jour J en cas d'invitation.</p>
+          <li class="nav-item">
+            <a class="nav-link" id="complementaire" data-toggle="tab" href="#img4" role="tab" aria-controls="img4" aria-selected="false">
+              <h5>SMS COMPLEMENTAIRE</h5>
+              <span>Ajouter un SMS pour clôturer vos questionnaire SMS : remerciements, rappel avant le jour J en cas d'invitation.</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -33,21 +51,21 @@
 
     <!-- Deuxième ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-start content">
-      <div class="col-md-5 offset-md-1 align-self-md-center">
+      <div class="col-md-5 align-self-md-center">
         <h4>Simulateur</h4>
         <p>Générez vos conversations SMS à l'aide d'un simulateur et testez toutes les combinaisons possibles de votre scénario.</p>
       </div>
-      <div class="col-md-5 offset-md-1 align-self-md-center">
+      <div class="col-md-5 offset-md-2 align-self-md-center">
         <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-preview.png" class="img-fluid mx-auto d-block align-self-md-center">
       </div>
     </div>
 
     <!-- Troisième ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-start content">
-      <div class="col-md-5 offset-md-1 align-self-md-center">
+      <div class="col-md-5 align-self-md-center order-2 order-md-1">
         <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-collaboration.png" class="img-fluid mx-auto d-block align-self-md-center">
       </div>
-      <div class="col-md-5 offset-md-1 align-self-md-center">
+      <div class="col-md-5 offset-md-2 align-self-md-center order-1 order-md-2">
         <h4>Collaborez avec vos équipes</h4>
         <p>Travaillez avec votre équipe au sein d'une même organisation.</p>
       </div>
@@ -55,21 +73,21 @@
 
     <!-- Quatrième ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-start content">
-      <div class="col-md-5 offset-md-1 align-self-md-center">
+      <div class="col-md-5 align-self-md-center">
         <h4>Gestion des listes noires</h4>
         <p>Importez votre liste noire, celle-ci est mise à jour au fur et à mesure de vos envois et téléchargeable pour actualiser votre CRM.</p>
       </div>
-      <div class="px-0 col-md-5 offset-md-1 align-self-md-center">
+      <div class="px-0 col-md-5 offset-md-2 align-self-md-center">
         <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-blacklist.png" class="img-fluid align-self-md-center float-right">
       </div>
     </div>
 
     <!-- Cinquième ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-start content">
-      <div class="col-md-5 offset-md-1 align-self-md-center">
+      <div class="col-md-5 align-self-md-center order-2 order-md-1">
         <img src="<?php bloginfo("template_directory"); ?>/images/fonctionnalites-illustration-analyse.png" class="img-fluid mx-auto d-block align-self-md-center">
       </div>
-      <div class="col-md-4 offset-md-1 align-self-md-center">
+      <div class="col-md-4 offset-md-2 align-self-md-center order-1 order-md-2">
         <h4>Analysez les réponses collectées</h4>
         <ul id="list-w-check">
           <li>Avec le reporting analysez facilement les réponses avec les graphiques générés par CleverTXT.</li>
@@ -82,11 +100,7 @@
     <!-- Sixième ligne -->
     <div class="row mx-0 my-3 py-5 justify-content-md-center content">
       <div class="col-md-12 py-4">
-        <div class="row">
-          <div class="col">
-            <h3 class="text-center">Autres fonctionnalités :</h3>
-          </div>
-        </div>
+        <h3 class="text-center">Autres fonctionnalités :</h3>
       </div>
       <div class="col-md-12 py-5">
         <div class="row justify-content-md-center">
@@ -187,3 +201,4 @@
     });
   });
   </script>
+</div>

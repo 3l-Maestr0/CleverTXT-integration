@@ -15,6 +15,10 @@ $footerbkg_hexa : #003366
 $hrcolor_hexa : #006080
 $ex-vert : #00cccc
 
+$gris : #f0f0f0
+$gris-hover : #e7e7e7
+$gris-active : #e0dcdc
+
 /* Couleur rose des boutons/texts
     - en hexadécimal
     - en rgb
@@ -268,12 +272,18 @@ $orange_rgb_active : rgb(255, 102, 0)
     width: 80%
 
 #list-fct
-  .list-group
-    border: none
-    .list-group-item, .list-group-item-action
+  border: none
+  .nav-item
+    border: none !important
+    width: 100%
+    .nav-link
       color: gray
       border: none
       border-radius: 10px
+      &:hover
+        background-color: $gris
+      &:active
+        background-color: $gris-hover
 
 // #list-w-check
 //   list-style: circle outside url('images/fonctionnalites-check.svg')
@@ -414,6 +424,117 @@ footer
     width: 25%
     border-color: $orange_hexa
 
+@media screen
+  .hidden-xl-down
+    display: none !important
+  .hidden-lg-down
+    display: block !important
+  .hidden-md-down
+    display: block !important
+  .hidden-sm-down
+    display: block !important
+  .hidden-xs-down
+    display: block !important
+
+  .hidden-xl-up
+    display: none !important
+  .hidden-lg-up
+    display: none !important
+  .hidden-md-up
+    display: none !important
+  .hidden-sm-up
+    display: none !important
+  .hidden-xs-up
+    display: none !important
+
+@media screen and (max-width: 1200px)
+  .hidden-xl-down
+    display: none !important
+  .hidden-lg-down
+    display: none !important
+  .hidden-md-down
+    display: block !important
+  .hidden-sm-down
+    display: block !important
+  .hidden-xs-down
+    display: block !important
+
+  .hidden-xl-up
+    display: block !important
+  .hidden-lg-up
+    display: none !important
+  .hidden-md-up
+    display: none !important
+  .hidden-sm-up
+    display: none !important
+  .hidden-xs-up
+    display: none !important
+
+@media screen and (max-width: 992px)
+  .hidden-xl-down
+    display: none !important
+  .hidden-lg-down
+    display: none !important
+  .hidden-md-down
+    display: none !important
+  .hidden-sm-down
+    display: block !important
+  .hidden-xs-down
+    display: block !important
+
+  .hidden-xl-up
+    display: block !important
+  .hidden-lg-up
+    display: block !important
+  .hidden-md-up
+    display: none !important
+  .hidden-sm-up
+    display: none !important
+  .hidden-xs-up
+    display: none !important
+
 @media screen and (max-width: 768px)
-  .bg
-    display: none
+  .hidden-xl-down
+    display: none !important
+  .hidden-lg-down
+    display: none !important
+  .hidden-md-down
+    display: none !important
+  .hidden-sm-down
+    display: none !important
+  .hidden-xs-down
+    display: block !important
+
+  .hidden-xl-up
+    display: block !important
+  .hidden-lg-up
+    display: block !important
+  .hidden-md-up
+    display: block !important
+  .hidden-sm-up
+    display: none !important
+  .hidden-xs-up
+    display: none !important
+
+@media screen and (max-width: 544px)
+  .hidden-xl-down
+    display: none !important
+  .hidden-lg-down
+    display: none !important
+  .hidden-md-down
+    display: none !important
+  .hidden-sm-down
+    display: none !important
+  .hidden-xs-down
+    display: none !important
+
+  .hidden-xl-up
+    display: block !important
+  .hidden-lg-up
+    display: block !important
+  .hidden-md-up
+    display: block !important
+  .hidden-sm-up
+    display: block !important
+  .hidden-xs-up
+    display: none !important

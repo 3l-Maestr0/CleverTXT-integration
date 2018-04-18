@@ -1,34 +1,20 @@
 <div class="my-5 py-5 mx-0 row justify-content-md-center">
-  <div class="col-md-10" id="tarif">
-    <div class="container-fluid text-center">
-      <div class="my-5 py-5 row justify-content-md-center">
-        <div class="col">
-          <h1>L'accès à la solution est <span id="or">gratuit</span>.</h1>
-        </div>
-      </div>
-      <div class="py-4 row justify-content-md-center">
-        <div class="col">
-          <p>Seul l'envoi de SMS vous est facturé.<br><strong>Prix unitaire du SMS : 6,9 cts</strong></p>
-        </div>
-      </div>
-      <div class="pt-4 pb-5 row justify-content-md-center">
-        <div class="col-md-12">
-          <form oninput="nbsms.value=parseInt(prix.value), cout.value = parseFloat(parseInt(prix.value)*6.9/100).toFixed(2)">
-            <p id="pop" class="col-md-2 py-4">
-              <output name="nbsms">0</output> SMS
-              <br>
-              <strong><output name="cout">0.00</output> €</strong>
-            </p>
-            <input id="prix" type="range" name="prix" value="0" min="0" max="1500" step="1"  data-thumbwidth="-2">
-          </form>
-        </div>
-      </div>
-    </div>
+  <div class="col-md-12 text-center py-5 px-4" id="tarif">
+    <h1 class="my-5">L'accès à la solution est <span id="or">gratuit</span>.</h1>
+    <p class="my-5">Seul l'envoi de SMS vous est facturé.<br><strong>Prix unitaire du SMS : 6,9 cts</strong></p>
+    <form class="my-5" oninput="nbsms.value=parseInt(prix.value), cout.value = parseFloat(parseInt(prix.value)*6.9/100).toFixed(2)">
+      <p id="pop" class="col-md-2 py-4">
+        <output name="nbsms">100</output> SMS
+        <br>
+        <strong><output name="cout">6.90</output> €</strong>
+      </p>
+      <input id="prix" type="range" name="prix" value="100" min="0" max="1500" step="1"  data-thumbwidth="-2">
+    </form>
   </div>
 </div>
 <div class="row p-0 m-0">
   <div class="col">
-    <img src="<?php bloginfo("template_directory"); ?>/images/filigramme-1.png" class="img-fluid float-right bg f3">
+    <img src="<?php bloginfo("template_directory"); ?>/images/filigramme-1.png" class="img-fluid float-right hidden-sm-down bg f3">
   </div>
 </div>
 
