@@ -56,7 +56,7 @@
 </div>
 
 <!-- Cinquième ligne -->
-<div class="row mx-0 my-5 py-5 justify-content-md-start content">
+<div class="row mx-0 mt-5 mb-2 pt-5 justify-content-md-start content">
   <div class="col-md-12 py-5">
     <h3 class="text-center">En quoi CleverTXT est different ?</h3>
   </div>

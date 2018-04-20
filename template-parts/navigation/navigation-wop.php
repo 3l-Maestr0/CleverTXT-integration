@@ -10,7 +10,7 @@
 
 ?>
 <nav class="navbar navbar-expand-lg navbar-light">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
 				<img src="<?php bloginfo("template_directory"); ?>/images/clevertxt-color-horizontal.png" alt="<?php bloginfo('name'); ?>">

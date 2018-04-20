@@ -13,12 +13,12 @@
 */
 
 ?>
-  <a class="cd-top js-cd-top" href="#myPage" data-toggle="tooltip" title="TO TOP">
+  <a class="cd-top js-cd-top" href="#myPage" data-toggle="tooltip" data-placement="top" title="TO TOP">
     <i class="fas fa-chevron-up"></i>
   </a>
 
 </div>
-<footer class="text-center">
+<footer id="footer" class="text-center">
 
 	<div class="py-5 d-md-flex flex-md-row align-items-md-center justify-content-md-center">
     <div class="col-md-2 p-2">
@@ -94,6 +94,12 @@
 			if( !scrolling ) {
 				scrolling = true;
 				(!window.requestAnimationFrame) ? setTimeout(checkBackToTop, 250) : window.requestAnimationFrame(checkBackToTop);
+        // if (window.scrollTop + window.innerHeight > document.clientHeight - document.getElementById('footer').offsetHeight) {
+        //   document.getElementByClassName('cd-top').style.position = "static";
+        // }
+        // else {
+        //   // document.getElementByClassName('cd-top').style.position = "fixed";
+        // }
 			}
 		});
 		//smooth scroll to top
