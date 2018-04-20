@@ -2,14 +2,14 @@
   <div class="col-md-12 text-center py-5 px-4" id="tarif">
     <h1 class="my-5">L'accès à la solution est <span id="or">gratuit</span>.</h1>
     <p class="my-5">Seul l'envoi de SMS vous est facturé.<br><strong>Prix unitaire du SMS : 6,9 cts</strong></p>
-    <form class="my-5" oninput="nbsms.value=parseInt(prix.value), cout.value = parseFloat(parseInt(prix.value)*6.9/100).toFixed(2)">
+    <div class="sliderSMS">
       <p id="pop" class="col-md-2 py-4">
-        <output name="nbsms">100</output> SMS
+        <output id="nbsms"></output> SMS
         <br>
-        <strong><output name="cout">6.90</output> €</strong>
+        <strong><output id="cout"></output> €</strong>
       </p>
-      <input id="prix" type="range" name="prix" value="100" min="0" max="1500" step="1"  data-thumbwidth="-2">
-    </form>
+      <div id="slider"></div>
+    </div>
   </div>
 </div>
 <div class="row p-0 m-0">
@@ -19,44 +19,64 @@
 </div>
 
 <script type="text/javascript">
-$('input[type="range"]').on('input', function() {
+$(function(){
+	var slider = $('#slider');
+  var out = $('#pop');
+  var nbsms = $('#nbsms'),
+      cout = $('#cout');
+	slider.slider({
+  	value: 100,
+  	min: 0,
+    max: 1500,
+  	orientation: "horizontal",
+    slide: function(event, ui) {
+      var sliderMin = slider.slider("option",'min'),
+          sliderMax = slider.slider("option",'max'),
+          sliderVal = ui.value,
+          sliderWidth = slider.width(),
+          sliderLeft = slider.offset().left,
+          thumb = slider.children(),
+          thumbWidth = thumb.width(),
+          offset = 0;
 
-  var control = $(this),
-    controlMin = control.attr('min'),
-    controlMax = control.attr('max'),
-    controlVal = control.val(),
-    controlThumbWidth = control.data('thumbwidth'),
-    width = this.offsetWidth;
+      var range = sliderMax - sliderMin;
 
-  var range = controlMax - controlMin;
-  var offset = 0;
+      var position = (sliderVal - sliderMin)/range,
+      		positionOffset;
 
-  var position = ((controlVal - controlMin) / range);
-  var positionOffset;
-  var output = document.getElementById('pop');
+      /*console.log("\n======================= test =======================");
+      console.log("sliderWidth : "+sliderWidth);
+      console.log("sliderMin : "+sliderMin);
+      console.log("sliderMax : "+sliderMax);
+      console.log("sliderVal : "+sliderVal);*/
 
-  console.log("================================== test : ==================================");
-  console.log(output.offsetLeft +'+'+ output.offsetWidth +'>='+ this.offsetLeft +'+'+ width); //a+b >= c + d
-  console.log((output.offsetLeft + output.offsetWidth) +'>='+ (this.offsetLeft + width)); //res(a+b) >= res(c+d)
-  console.log((output.offsetLeft + output.offsetWidth) >= (this.offsetLeft + width)); //boolean
-  console.log("position : " + position);
-  console.log("position * width : " + (position*width));
+      if((position*sliderWidth + sliderLeft) <= sliderLeft + out.innerWidth()/2 - thumbWidth/2) {
+        positionOffset = 0;
+      }
+      else if((position*sliderWidth + sliderLeft) + out.innerWidth()/2 >= sliderLeft + sliderWidth){
+        positionOffset = sliderWidth - out.innerWidth();
+      }
+      else{
+        positionOffset = sliderWidth * position + offset - out.innerWidth()/2 + thumbWidth/2;
+        offset = offset - position;
+      }
 
-  if((position*width + this.offsetLeft) <= this.offsetLeft + output.offsetWidth/2) {
-    positionOffset = 0;
-  }
-  else if((position*width + this.offsetLeft) + output.offsetWidth/2 >= this.offsetLeft + width){
-    positionOffset = width - output.offsetWidth;
-  }
-  else{
-    positionOffset = width * position + offset - output.offsetWidth/2;
-    offset -= position;
-  }
+      console.log("\n======================= test =======================");
+      console.log("out.width() : "+out.width());
+      console.log("thumbWidth : "+thumbWidth);
+      console.log("sliderWidth : "+sliderWidth);
+      console.log("sliderLeft : "+sliderLeft);
+      console.log("position : "+position);
+      console.log("positionOffset : "+positionOffset);
+      console.log("offset : "+offset);
 
-  /*output
-    .css('left', 'calc(' + position + '% - ' + positionOffset + 'px)')*/
-  output.style.left =  positionOffset + "px";
-  output.style.marginLeft = offset + "%";
-
+      nbsms.val(ui.value);
+      cout.val((ui.value*0.069).toFixed(2));
+      out.css('left', positionOffset + "px");
+      out.css('marginLeft', offset + "%");
+    }
+  });
+  nbsms.val(slider.slider('value'));
+  cout.val((slider.slider('value')*0.069).toFixed(2));
 });
 </script>

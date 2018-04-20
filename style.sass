@@ -159,75 +159,19 @@ $orange_rgb_active : rgb(255, 102, 0)
   color: white
   #or
     color: gold
-  input[type=range]
-    -webkit-appearance: none
-    -moz-appearance: none
-    display: block
-    width: 100%
-    margin: 8.5px 0
-    &:focus
-      outline: none
-    &::-webkit-slider-runnable-track
-      position: relative
-      width: 100%
-      height: 11px
-      cursor: pointer
-      background: linear-gradient(to right, #c44dff, #ff1a75)
-      border-radius: 30px
+  #slider
+    height: 10px
+    border-radius: 30px
+    border: none
+    background: linear-gradient(to right, #c44dff, #ff1a75)
+    span
+      border-radius: 100%
+      outline: none !important
       border: none
-    &::-webkit-slider-thumb
-      position: relative
-      height: 28px
-      width: 28px
-      border-radius: 30px
-      background: white
-      cursor: grab
-      -webkit-appearance: none
-      margin-top: -8.5px
-    &:focus::-webkit-slider-runnable-track
-      background: linear-gradient(to right, #c44dff, #ff1a75)
-    &::-moz-range-track
-      width: 100%
-      height: 11px
-      cursor: pointer
-      background: linear-gradient(to right, #c44dff, #ff1a75)
-      border-radius: 30px
-    &::-moz-range-thumb
-      height: 28px
-      width: 28px
-      border-radius: 30px
-      background: white
-      cursor: grab
-    &::-ms-track
-      width: 100%
-      height: 11px
-      cursor: pointer
-      background: transparent
-      border-color: transparent
-      color: transparent
-    &::-ms-fill-lower
-      background: rgba(41, 97, 145, 0.78)
-      border: 0px solid rgba(1, 1, 1, 0)
-      border-radius: 50px
-      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0)
-    &::-ms-fill-upper
-      background: rgba(48, 113, 169, 0.78)
-      border: 0px solid rgba(1, 1, 1, 0)
-      border-radius: 50px
-      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0)
-    &::-ms-thumb
-      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0)
-      border: 0px solid rgba(0, 0, 0, 0)
-      height: 28px
-      width: 28px
-      border-radius: 50px
-      background: #ff00ff
-      cursor: pointer
-      height: 11px
-    &:focus::-ms-fill-lower
-      background: rgba(48, 113, 169, 0.78)
-    &:focus::-ms-fill-upper
-      background: rgba(55, 129, 193, 0.78)
+      background-color: white
+      height: 20px
+      width: 20px
+      top: -5px
 
 #pop
   position: relative
@@ -284,11 +228,6 @@ $orange_rgb_active : rgb(255, 102, 0)
         background-color: $gris
       &:active
         background-color: $gris-hover
-
-// #list-w-check
-//   list-style: circle outside url('images/fonctionnalites-check.svg')
-//   li::marker
-//     height: 2em
 
 .sellist
   box-shadow: none !important
@@ -362,6 +301,49 @@ html
     &:active
       border-color: $rose_hexa_hover
       background-color: $rose_hexa_hover
+
+/* ============================================================================*/
+
+.cd-top
+  display: inline-block
+  position: fixed
+  bottom: 0px
+  border-radius: 30px 30px 0px 0px
+  color: white
+  padding:
+    left: 25px
+    right: 25px
+    top: 3px
+    bottom: 3px
+  /* image replacement properties */
+  overflow: hidden
+  background-color: $footerbkg_hexa
+  visibility: hidden
+  opacity: 0
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s
+  transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s
+
+.cd-top--show,
+.cd-top--fade-out,
+.cd-top:hover
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s
+  transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s
+
+.cd-top--show
+  /* the button becomes visible */
+  visibility: visible
+  opacity: 1
+
+.cd-top--fade-out
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5
+
+.cd-top:hover
+  // background-color: #e86256
+  color: white
+  opacity: 1
+
+/* ============================================================================*/
 
 footer
   background-color: $footerbkg_hexa

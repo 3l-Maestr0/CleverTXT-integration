@@ -13,14 +13,14 @@
 */
 
 ?>
-
-</div>
-<footer class="text-center">
-  <a class="my-5 up-arrow text-white" href="#myPage" data-toggle="tooltip" title="TO TOP">
+  <a class="cd-top js-cd-top" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <i class="fas fa-chevron-up"></i>
   </a>
 
-	<div class="my-5 d-md-flex flex-md-row align-items-md-center justify-content-md-center">
+</div>
+<footer class="text-center">
+
+	<div class="py-5 d-md-flex flex-md-row align-items-md-center justify-content-md-center">
     <div class="col-md-2 p-2">
       <img src="<?php bloginfo("template_directory"); ?>/images/footer-1.png" alt="" width="150">
     </div>
@@ -29,7 +29,12 @@
       <p>Créez un compte en version bêta <strong>dès maintenant</strong></p>
     </div>
     <div class="col-md-4 p-2">
-      <a href="#" role="button" class="btn btn-lg btn-block btn-default btn-grad-roor">Créez un compte bêta dès maintenant <img class="ml-2 icon" src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-white.svg"></a>
+      <a href="https://app.clevertxt.com/register" role="button" class="btn btn-lg btn-block btn-default btn-grad-roor">
+        <span class="mx-auto text-center">
+          Créez un compte bêta dès maintenant
+        </span>
+        <img class="ml-2 icon" src="<?php bloginfo("template_directory"); ?>/images/icon-arrow-white.svg">
+      </a>
     </div>
   </div>
 
@@ -71,34 +76,84 @@
 </footer>
 
 <script>
-$(document).ready(function(){
+(function(){
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip();
+  var screenWidth = screen.width;
+	var backTop = document.getElementsByClassName('js-cd-top')[0],
+    backTopWidth = backTop.offsetWidth,
+		// browser window scroll (in pixels) after which the "back to top" link is shown
+		offset = 150,
+		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+		scrollDuration = 700
+		scrolling = false;
+    backTop.style.left = screen.width/2 - backTopWidth/2 + "px";
+	if( backTop ) {
+		//update back to top visibility on scrolling
+		window.addEventListener("scroll", function(event) {
+			if( !scrolling ) {
+				scrolling = true;
+				(!window.requestAnimationFrame) ? setTimeout(checkBackToTop, 250) : window.requestAnimationFrame(checkBackToTop);
+			}
+		});
+		//smooth scroll to top
+		backTop.addEventListener('click', function(event) {
+			event.preventDefault();
+			(!window.requestAnimationFrame) ? window.scrollTo(0, 0) : scrollTop(scrollDuration);
+		});
+	}
 
-  // Add mdooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+	function checkBackToTop() {
+		var windowTop = window.scrollY || document.documentElement.scrollTop;
+		( windowTop > offset ) ? addClass(backTop, 'cd-top--show') : removeClass(backTop, 'cd-top--show', 'cd-top--fade-out');
+		scrolling = false;
+	}
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+	function scrollTop(duration) {
+	    var start = window.scrollY || document.documentElement.scrollTop,
+	        currentTime = null;
 
-      // Prevent default anchor click behavior
-      event.preventDefault();
+	    var animateScroll = function(timestamp){
+	    	if (!currentTime) currentTime = timestamp;
+	        var progress = timestamp - currentTime;
+	        var val = Math.max(Math.easeInOutQuad(progress, start, -start, duration), 0);
+	        window.scrollTo(0, val);
+	        if(progress < duration) {
+	            window.requestAnimationFrame(animateScroll);
+	        }
+	    };
 
-      // Store hash
-      var hash = this.hash;
+	    window.requestAnimationFrame(animateScroll);
+	}
 
-      // Using jQuery's animate() method to add mdooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
+	Math.easeInOutQuad = function (t, b, c, d) {
+ 		t /= d/2;
+		if (t < 1) return c/2*t*t + b;
+		t--;
+		return -c/2 * (t*(t-2) - 1) + b;
+	};
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
+	//class manipulations - needed if classList is not supported
+	function hasClass(el, className) {
+	  	if (el.classList) return el.classList.contains(className);
+	  	else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+	}
+	function addClass(el, className) {
+		var classList = className.split(' ');
+	 	if (el.classList) el.classList.add(classList[0]);
+	 	else if (!hasClass(el, classList[0])) el.className += " " + classList[0];
+	 	if (classList.length > 1) addClass(el, classList.slice(1).join(' '));
+	}
+	function removeClass(el, className) {
+		var classList = className.split(' ');
+	  	if (el.classList) el.classList.remove(classList[0]);
+	  	else if(hasClass(el, classList[0])) {
+	  		var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|$)');
+	  		el.className=el.className.replace(reg, ' ');
+	  	}
+	  	if (classList.length > 1) removeClass(el, classList.slice(1).join(' '));
+	}
+})();
 </script>
 
 <?php wp_footer(); ?>
